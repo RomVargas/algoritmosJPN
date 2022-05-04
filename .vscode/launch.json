@@ -5,6 +5,27 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch ApartmentHunting",
+            "request": "launch",
+            "mainClass": "ApartmentHunting",
+            "projectName": "algoritmosJPN_8b19bba8"
+        },
+        {
+            "type": "java",
+            "name": "Launch Program",
+            "request": "launch",
+            "mainClass": "Program",
+            "projectName": "algoritmosJPN_8b19bba8"
+        },
+        {
+            "type": "java",
+            "name": "Launch TwoNumbersSum",
+            "request": "launch",
+            "mainClass": "TwoNumbersSum",
+            "projectName": "algoritmosJPN_8b19bba8"
+        },
+        {
             "name": "Java",
             "type": "java",
             "request": "launch",
