@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MathFunctions",
+            "request": "launch",
+            "mainClass": "MathFunctions",
+            "projectName": "algoritmosJPN_8b19bba8"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "algoritmosJPN_8b19bba8"
+        },
+        {
+            "type": "java",
             "name": "Launch ApartmentHunting",
             "request": "launch",
             "mainClass": "ApartmentHunting",

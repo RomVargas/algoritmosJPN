@@ -1,6 +1,20 @@
 import java.util.*;
-
-class Program {
+/**
+ * <h1> Four Numbers Sum </h1>
+ * <p> Algoritmo para obtener 4 digitos que sumen un resultado dado </p>
+ * <p>  </p>
+ * { @code fourNumbersum() }
+ * @author Roman Vargas
+ * @since 1.0
+ * @version 1.0
+ */
+class FourNumberSum {
+  
+  /** 
+   * @param array
+   * @param targetSum
+   * @return List<Integer[]>
+   */
   public static List<Integer[]> fourNumberSum(int[] array, int targetSum) {
     Map<Integer, List<Integer[]>> allPairSums = new HashMap<>();
 		List<Integer[]> quadruplets = new ArrayList<Integer[]>();

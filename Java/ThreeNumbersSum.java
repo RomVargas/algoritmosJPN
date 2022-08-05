@@ -2,6 +2,12 @@
 import java.util.*;
 
 class Program {
+  
+  /** 
+   * @param array
+   * @param targetSum
+   * @return List<Integer[]>
+   */
   public static List<Integer[]> threeNumberSum(int[] array, int targetSum) {
  		Arrays.sort(array);
 		List<Integer[]> triplets = new ArrayList<Integer[]>();
