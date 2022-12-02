@@ -1,4 +1,4 @@
-public class Test {
+public class ObtenrRendimiento {
     
     public static void main(String[] args) {
         System.out.println(getResult(10000));

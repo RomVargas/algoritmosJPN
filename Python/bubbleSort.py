@@ -6,3 +6,7 @@ def bubbleSort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j] 
 
     return arr
+
+def postfixSort(arr):
+    a =  arr[0]
+    
