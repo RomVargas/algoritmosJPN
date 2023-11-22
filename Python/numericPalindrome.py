@@ -18,4 +18,3 @@ def numericPalindrome(number):
     else:
         print('is not')
 
-numericPalindrome(12321)

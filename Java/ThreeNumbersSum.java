@@ -1,7 +1,7 @@
 // O(n^2) time | O(n) space
 import java.util.*;
 
-class Program {
+class ThreeNumbersSum {
   
   /** 
    * @param array

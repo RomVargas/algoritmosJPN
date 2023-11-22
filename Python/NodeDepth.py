@@ -1,4 +1,13 @@
 def nodeDepths(root, depth=0):
+    """
+    We're going to use a stack to store tuples of (node, depth). 
+    Then, as we iterate over the stack we add the depth to a running sum and push the child nodes to the
+    stack with depths that are incremented by 1.
+    
+    :param root: The root node of the binary tree
+    :param depth: the depth of the node, defaults to 0 (optional)
+    :return: The sum of all the depths of the nodes in the tree.
+    """
     if root is None:
         return 0
     return depth + nodeDepths(root.left, depth + 1) + nodeDepths(root.right, depth + 1)

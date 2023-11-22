@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch GlobalMatch",
+            "request": "launch",
+            "mainClass": "GlobalMatch",
+            "projectName": "algoritmosJPN_8b19bba8"
+        },
+        {
+            "type": "java",
+            "name": "Launch CodigosVariados",
+            "request": "launch",
+            "mainClass": "CodigosVariados",
+            "projectName": "algoritmosJPN_8b19bba8"
+        },
+        {
+            "type": "java",
+            "name": "Launch JobSearch",
+            "request": "launch",
+            "mainClass": "JobSearch",
+            "projectName": "algoritmosJPN_8b19bba8"
+        },
+        {
+            "type": "java",
             "name": "Launch MathFunctions",
             "request": "launch",
             "mainClass": "MathFunctions",
