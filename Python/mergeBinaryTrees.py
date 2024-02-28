@@ -48,13 +48,21 @@ class BinaryTree:
 
 
 def mergeBinaryTrees(tree1, tree2):
-    if tree1 is None:
+  """
+  The function `mergeBinaryTrees` takes two binary trees as input and merges them by adding the values
+  of corresponding nodes, returning the merged tree.
+  
+  :param tree1: The first binary tree that we want to merge
+  :param tree2: The parameter "tree2" represents the second binary tree that we want to merge with the
+  first binary tree
+  :return: the merged binary tree, which is represented by the variable `tree1`.
+  """
+  if tree1 is None:
        return tree2
-    if tree2 is None:
+  if tree2 is None:
         return tree1
 
-    tree1.value += tree2.value
-    tree1.left = mergeBinaryTrees(tree1.left, tree2.left)
-    tree1.right = mergeBinaryTrees(tree1.right, tree2. right)
-    return tree1
-
+  tree1.value += tree2.value
+  tree1.left = mergeBinaryTrees(tree1.left, tree2.left)
+  tree1.right = mergeBinaryTrees(tree1.right, tree2. right)
+  return tree1
