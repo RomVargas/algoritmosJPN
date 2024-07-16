@@ -11,13 +11,6 @@ def fibonacci_dinamico(n,  memo = {}):
         memo[n] = resultado
 
         return resultado
-    
-
-if __name__ == '__main__':
-    sys.setrecursionlimit = 10000
-    n = int(input('introdusca numero'))
-    resultado = fibonacci_dinamico(n)
-    print(resultado)
 
 
 def getNthFib(n, memory={}):
@@ -30,8 +23,11 @@ def getNthFib(n, memory={}):
     except KeyError:
         result = getNthFib(n-1, memory) + getNthFib(n-2, memory)
         memory[n] = result
+        return result
 
-
-
-
-        return result   
+if __name__ == '__main__':
+    sys.setrecursionlimit = 10000
+    n = int(input('introdusca numero'))
+    #resultado = fibonacci_dinamico(n)
+    resultado  = getNthFib(n)
+    print(resultado)   

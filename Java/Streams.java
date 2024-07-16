@@ -1,12 +1,15 @@
+import java.util.Arrays;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Streams {
     //Como crear un stream
     
     Stream<Integer> myStream = anyCollection.Stream();
-    Stream<Integer> myStream = Arrays.Stream(anyArray);
-    Stream<Integer> myStream = Stream.of(1,2,3);
-    intStream myStream =IntStream.range(1, 10);
+    private Object anyArray;
+    Stream<Integer> myStream1 = Arrays.Stream(anyArray);
+    Stream<Integer> myStream2 = Stream.of(1,2,3);
+    Stream myStream3 =IntStream.range(1, 10);
 
     /* 
     Metodos finales - Cierran el Stream y ya no se puede trabajar con el

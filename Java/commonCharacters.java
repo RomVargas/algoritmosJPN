@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.HashSet;
+
+
 public class commonCharacters {
     public String[] commonCharacters(String[] strings) {
     // Write your code here.
@@ -49,7 +53,7 @@ public class commonCharacters {
 }
 
 class ProgramTest {
-  @Test
+
   public void TestCase1() {
     String[] input = new String[] {"abc", "bcd", "cbad"};
     String[] expected = new String[] {"b", "c"};

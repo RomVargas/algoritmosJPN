@@ -1,11 +1,25 @@
 import java.util.*;
 
+/**
+ * The WaterfallStreams class in Java simulates the flow of water through a matrix, calculating the
+ * final percentages of water flow at each position.
+ */
 public class WaterfallStreams {
+    // The `waterfallStreams` method in the `WaterfallStreams` class takes a 2D array representing a
+    // matrix and an integer `source` as parameters.
     public double[] waterfallStreams(double[][] array, int source) {
     double[] rowAbove = array[0];
 
+   // The line `rowAbove[source] = -1;` in the `waterfallStreams` method is setting the value at the
+   // specified `source` index in the `rowAbove` array to -1. This is done to indicate that the water
+   // starts flowing from the `source` position in the matrix. By setting it to -1, it marks that this
+   // position is the starting point for the water flow calculation in the subsequent rows of the
+   // matrix.
     rowAbove[source] = -1;
 
+
+    // This part of the `waterfallStreams` method in the `WaterfallStreams` class is responsible for
+    // simulating the flow of water through the matrix. Here's a breakdown of what it does:
     for(int row = 1; row < array.length; row++) {
       double[] currentRow = array[row];
       for(int idx = 0; idx < rowAbove.length; idx++) {
@@ -35,6 +49,9 @@ public class WaterfallStreams {
           }
         }
 
+        // This part of the `waterfallStreams` method in the `WaterfallStreams` class is responsible
+        // for handling the flow of water to the left side of the current position in the matrix.
+        // Here's a breakdown of what it does:
         int leftIdx = idx;
         while(leftIdx - 1 >= 0){
           leftIdx -= 1;
