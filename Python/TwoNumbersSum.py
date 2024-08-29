@@ -9,6 +9,18 @@ def twoNumbersSum(array, targetSum):
     return []
 
 # O(n) time | O(n) sapce
+    """
+    This Python function finds two numbers in an array that sum up to a target sum using a hash table to
+    store previously seen numbers.
+    
+    @param array The `array` parameter is a list of integers where we are searching for two numbers that
+    add up to the `targetSum`.
+    @param targetSum The `targetSum` parameter is the sum that we are trying to find by adding two
+    numbers from the `array`. The function `twoNumbersSum2` takes an `array` of integers and a
+    `targetSum` as input, and it returns a pair of numbers from the `array`
+    @return The function `twoNumbersSum2` returns a list containing two numbers that add up to the
+    `targetSum`. If no such pair is found, an empty list is returned.
+    """
 def twoNumbersSum2(array, targetSum):
     nums = {}
     for num in array:

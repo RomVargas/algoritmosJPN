@@ -1,10 +1,11 @@
 public class bestSeat {
     int bestSeat = -1;
-      int maxSpace= 0;
+    int maxSpace= 0;
 
     int left = 0;
     while(left < seats.length) {
       int right = left + 1;
+      Object seats;
       while(right < seats.length && seats[right] == 0) {
         right++;
       }

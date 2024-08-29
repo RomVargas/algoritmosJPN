@@ -1,12 +1,8 @@
-package com.debuggeando_ideas.code_challenge;
+package streams.code_challenge;
 
-import org.junit.jupiter.api.Test;
+
 
 import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
 @FunctionalInterface
@@ -36,7 +32,7 @@ class CodeImpl {
 public class CodeChallenge {
 
 
-    @Test
+    //@Test
     public void startTest() {
 
         PerformOperation isOdd = CodeImpl.isOdd();
@@ -48,13 +44,13 @@ public class CodeChallenge {
         int[] isPalindromeCases = {54322345,710101017,888,7848729,783483002};
 
     
-        assertAll( "Test isOdd" ,
+/*        assertAll( "Test isOdd" ,
                 () -> assertTrue(isOdd.check(isOddCases[0])),
                 () -> assertTrue(isOdd.check(isOddCases[1])),
                 () -> assertTrue(isOdd.check(isOddCases[2])),
                 () -> assertFalse(isOdd.check(isOddCases[3])),
                 () -> assertFalse(isOdd.check(isOddCases[4]))
-        );
+        ); */
 
        /*assertAll( "Test isPrime" ,
               () -> assertTrue(isPrime.check(isPrimeCases[0])),

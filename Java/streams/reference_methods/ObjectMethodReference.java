@@ -1,4 +1,5 @@
-package com.debuggeando_ideas.reference_methods;
+package streams.reference_methods;
+
 
 import java.util.ArrayList;
 import java.util.List;

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PerfectNumbers",
+            "request": "launch",
+            "mainClass": "PerfectNumbers",
+            "projectName": "algoritmosJPN_56b734a"
+        },
+        {
+            "type": "java",
             "name": "Launch GlobalMatch",
             "request": "launch",
             "mainClass": "GlobalMatch",

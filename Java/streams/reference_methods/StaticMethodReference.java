@@ -1,4 +1,4 @@
-package com.debuggeando_ideas.reference_methods;
+package streams.reference_methods;
 
 import java.util.UUID;
 import java.util.function.Supplier;
