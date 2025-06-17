@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ReverseString",
+            "request": "launch",
+            "mainClass": "ReverseString",
+            "projectName": "algoritmosJPN_3ebc840b"
+        },
+        {
+            "type": "java",
             "name": "PerfectNumbers",
             "request": "launch",
             "mainClass": "PerfectNumbers",

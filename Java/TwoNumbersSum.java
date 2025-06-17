@@ -19,48 +19,51 @@ public class TwoNumbersSum{
         System.out.println("");
     }
 
+    // 🔄 MÉTODO 1: FUERZA BRUTA - O(n²) - Compara cada par de números
     public static int[] twoNumbersSum(int[] array, int targetSum){
-        for (int i=0; i < array.length - 1; i++){
-            int firstNum = array[i];
-            for (int j = i + 1; j < array.length; j++){
-                int secondNum = array[j];
-                if(firstNum + secondNum == targetSum){
-                    int[] res = {firstNum, secondNum};
-                    return res;
+        for (int i=0; i < array.length - 1; i++){           // Itera por cada elemento del array (primer número)
+            int firstNum = array[i];                         // Guarda el primer número de la pareja
+            for (int j = i + 1; j < array.length; j++){      // Itera por los elementos restantes (segundo número)
+                int secondNum = array[j];                    // Guarda el segundo número de la pareja
+                if(firstNum + secondNum == targetSum){       // Verifica si la suma es igual al objetivo
+                    int[] res = {firstNum, secondNum};       // Crea un array con los dos números encontrados
+                    return res;                              // Retorna el array con la pareja que suma el objetivo
                 }
             }
         }
-        return new int[0];
+        return new int[0];                                   // Si no encuentra ninguna pareja, retorna array vacío
     }
 
+// 🗂️ MÉTODO 2: HASH SET - O(n) - Una sola pasada usando tabla hash
 public static int[] twoNumbersSum2(int[] array, int targetSum) {
-    Set<Integer> nums = new HashSet<>();
-		for (int num : array) {
-			int potentialMatch = targetSum - num;
-			if(nums.contains(potentialMatch)) {
-				return new int[] {potentialMatch, num};
+    Set<Integer> nums = new HashSet<>();                     // Crea un HashSet para almacenar números ya visitados
+		for (int num : array) {                              // Itera una sola vez por cada número del array
+			int potentialMatch = targetSum - num;            // Calcula qué número necesitamos para completar la suma
+			if(nums.contains(potentialMatch)) {              // Verifica si ya hemos visto el número complementario
+				return new int[] {potentialMatch, num};      // Si lo encontramos, retorna la pareja de números
 			} else {
-				nums.add(num);
+				nums.add(num);                               // Si no lo encontramos, agrega el número actual al set
 			}
 		}
-    return new int[0];
+    return new int[0];                                       // Si no encuentra ninguna pareja, retorna array vacío
   }
 
+ // ↔️ MÉTODO 3: DOS PUNTEROS - O(n log n) - Ordena el array y usa dos punteros
  public static int[] twoNumbersSum3(int[] array, int targetSum) {
-    Arrays.sort(array);
-		int left = 0;
-		int right = array.length - 1;
-		while (left < right) {
-			int currentSum = array[left] + array[right];
-			if (currentSum == targetSum) {
-				return new int[] {array[left], array[right]};
-			} else if (currentSum < targetSum) {
-				left++; 
-			} else if(currentSum > targetSum) {
-				right--;
+    Arrays.sort(array);                                      // Ordena el array de menor a mayor - O(n log n)
+		int left = 0;                                        // Puntero izquierdo (inicio del array)
+		int right = array.length - 1;                       // Puntero derecho (final del array)
+		while (left < right) {                               // Mientras los punteros no se crucen
+			int currentSum = array[left] + array[right];     // Suma los valores de ambos punteros
+			if (currentSum == targetSum) {                   // Si la suma es igual al objetivo
+				return new int[] {array[left], array[right]};// Retorna la pareja de números encontrada
+			} else if (currentSum < targetSum) {             // Si la suma es menor que el objetivo
+				left++;                                      // Mueve el puntero izquierdo hacia la derecha (aumenta suma)
+			} else if(currentSum > targetSum) {              // Si la suma es mayor que el objetivo
+				right--;                                     // Mueve el puntero derecho hacia la izquierda (disminuye suma)
 			}
 		}
-    return new int[0];
+    return new int[0];                                       // Si no encuentra ninguna pareja, retorna array vacío
   }
 }
 

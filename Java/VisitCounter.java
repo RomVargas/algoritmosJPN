@@ -1,6 +1,22 @@
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Stream;
+import java.util.stream.Collectors;
+
+/**
+ * Clase que representa las estadísticas de visita de un usuario
+ */
+class UserStats {
+    private Optional<Long> visitCount;
+    
+    public UserStats(Optional<Long> visitCount) {
+        this.visitCount = visitCount != null ? visitCount : Optional.empty();
+    }
+    
+    public Optional<Long> getVisitCount() {
+        return visitCount;
+    }
+}
 
 /**
  * The system you work with on a daily basis runs multiple microservices.

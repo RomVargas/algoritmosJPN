@@ -1,3 +1,5 @@
+import java.util.ArrayDeque;
+
 public class InverBinaryTree {
    ArrayDeque<BinaryTree> queue = new ArrayDeque<BinaryTree>();
     queue.addLast(tree);
