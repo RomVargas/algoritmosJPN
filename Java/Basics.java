@@ -131,6 +131,10 @@ public class Basics {
         myMap.put("three", 3);
         myMap.put("four", 4);
         myMap.put("five", 5);
+        myMap.get("one");
+        // obtener por indice de myMap
+
+        System.out.println("valor" + myMap.get("one"));
         
         mySet.add(1);
         mySet.add(2);
@@ -144,6 +148,8 @@ public class Basics {
         myQueue.add(3);
         myQueue.add(4);
         myQueue.add(5);
+        myQueue.stream().forEach(System.out::println);
+        myQueue.stream().count();
 
         myStack.push(1);
         myStack.push(2);

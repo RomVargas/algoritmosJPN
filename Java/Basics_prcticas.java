@@ -260,6 +260,58 @@ public class Basics_prcticas {
         Integer edadEliminada = edades.remove("Bob");
         System.out.println("Edad eliminada de Bob: " + edadEliminada);
         
+        // EJEMPLOS DE CÓMO RECORRER UN MAP
+        System.out.println("\n🔄 RECORRIENDO EL MAP:");
+        
+        // Método 1: Recorrer con entrySet()
+        System.out.println("Método 1 - entrySet():");
+        for (Map.Entry<String, Integer> entry : edades.entrySet()) {
+            System.out.println("Clave: " + entry.getKey() + ", Valor: " + entry.getValue());
+        }
+        
+        // Método 2: Recorrer solo las claves
+        System.out.println("\nMétodo 2 - keySet():");
+        for (String clave : edades.keySet()) {
+            System.out.println("Clave: " + clave + ", Valor: " + edades.get(clave));
+        }
+        
+        // Método 3: Recorrer solo los valores
+        System.out.println("\nMétodo 3 - values():");
+        for (Integer valor : edades.values()) {
+            System.out.println("Valor: " + valor);
+        }
+        
+        // Método 4: Usando forEach con lambda
+        System.out.println("\nMétodo 4 - forEach con lambda:");
+        edades.forEach((clave, valor) -> System.out.println("Clave: " + clave + ", Valor: " + valor));
+        
+        // EJEMPLOS DE CAMBIOS A KEYS Y VALUES
+        System.out.println("\n🔧 CAMBIANDO KEYS Y VALUES:");
+        
+        // Cambiar un valor existente
+        edades.put("Ana", 27);
+        System.out.println("Después de cambiar valor de Ana: " + edades);
+        
+        // Cambiar una clave (requiere eliminar y agregar)
+        Integer valorCarlos = edades.remove("Carlos");
+        edades.put("Carlos Rodriguez", valorCarlos);
+        System.out.println("Después de cambiar clave Carlos: " + edades);
+        
+        // Incrementar todos los valores en 1
+        System.out.println("\nIncrementando todos los valores en 1:");
+        for (Map.Entry<String, Integer> entry : edades.entrySet()) {
+            edades.put(entry.getKey(), entry.getValue() + 1);
+        }
+        System.out.println("Resultado: " + edades);
+        
+        // Convertir claves a mayúsculas (crear nuevo map)
+        System.out.println("\nConvirtiendo claves a mayúsculas:");
+        Map<String, Integer> edadesMayusculas = new HashMap<>();
+        for (Map.Entry<String, Integer> entry : edades.entrySet()) {
+            edadesMayusculas.put(entry.getKey().toUpperCase(), entry.getValue());
+        }
+        System.out.println("Map con claves en mayúsculas: " + edadesMayusculas);
+        
         System.out.println("\n" + "=".repeat(50) + "\n");
     }
     
